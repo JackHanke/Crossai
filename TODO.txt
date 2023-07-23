@@ -1,0 +1,41 @@
+Helpful Links
+
+Link to browser-based Crossy Road: https://poki.com/en/g/crossy-road
+
+Projects that have done the same thing:  
+https://medium.com/@songyilong18_21143/deep-learning-crossy-road-cccc2b646d2d
+http://web.stanford.edu/class/archive/cs/cs221/cs221.1192/2018/restricted/posters/nwrubin/poster.pdf
+
+
+TODO
+
+--Desktop Interaction--
+ - Learn basics of Selenium (https://selenium-python.readthedocs.io/index.html)
+     - Get scripted inputs to register in crossy road game
+
+--Data Collection--
+ - We need a way to collect and format the pixels of the game to the alg. 
+Likely screenshots, but what is the best way to do this consistently?
+How will the data be handled, both processing and deleting.
+
+--Reward Modeling--
+ - The reward for the algorithm will be the score. We need a 100% accurate way to determine the score from the game. 
+ The score of the game is recorded in the top right corner of the game window, so we can get that information from screenshots
+    - The first idea I had was to have an internal score tracker that incremements everytime there is a change in the number of white pixels in the top left
+        This could be an issue if a white truck or car passes behind the score
+    - My second idea is to literally do an MNIST style digit recognition trained on the font 
+Can we get the score just from the browser somehow?
+
+--Model Architecture-- 
+ - I honestly need to do some serious review in this category. I think we could do a minimax and train the evaluation function on the screenshots
+ - We could also do a Deep RL approach, but I don't know enough about how that works to implement it just yet
+
+--Training--
+If we are going for the minimax approach, how are we going to get labelled data for the situation and right move to play, other than recording a human play. 
+    If we are going to do this approach, we need to also have a data collection script written.
+If we go for the Deep RL approach, how are we going to spin up many instance of the game to train on?
+
+--Other--
+I can see a possible latency issue with the algorithm, that being a lag between the pixels being displayed in the browser,
+the algorithm calculating a move, and then sending the move back to the browser.
+How do we resolve this?
