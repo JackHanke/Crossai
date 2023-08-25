@@ -9,10 +9,6 @@ http://web.stanford.edu/class/archive/cs/cs221/cs221.1192/2018/restricted/poster
 
 TODO
 
---Desktop Interaction--
- - Learn basics of Selenium (https://selenium-python.readthedocs.io/index.html)
-     - Get scripted inputs to register in crossy road game
-
 --Data Collection--
  - We need a way to collect and format the pixels of the game to the alg. 
 Likely screenshots, but what is the best way to do this consistently?
