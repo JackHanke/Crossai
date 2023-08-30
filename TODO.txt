@@ -16,20 +16,18 @@ How will the data be handled, both processing and deleting.
 
 --Reward Modeling--
  - The reward for the algorithm will be the score. We need a 100% accurate way to determine the score from the game. 
- The score of the game is recorded in the top right corner of the game window, so we can get that information from screenshots
-    - The first idea I had was to have an internal score tracker that incremements everytime there is a change in the number of white pixels in the top left
-        This could be an issue if a white truck or car passes behind the score
-    - My second idea is to literally do an MNIST style digit recognition trained on the font 
-Can we get the score just from the browser somehow?
+ The score of the game is recorded in the top left corner of the game window, so we can get that information from screenshots
+    - The best way is to have hardcoded images of the score font, then parse the top left to determine the total score
 
 --Model Architecture-- 
  - I honestly need to do some serious review in this category. I think we could do a minimax and train the evaluation function on the screenshots
  - We could also do a Deep RL approach, but I don't know enough about how that works to implement it just yet
 
 --Training--
-If we are going for the minimax approach, how are we going to get labelled data for the situation and right move to play, other than recording a human play. 
+If we are going for the minimax approach, how are we going to get labelled data for the situation and right move to play, other than recording a human play?
     If we are going to do this approach, we need to also have a data collection script written.
 If we go for the Deep RL approach, how are we going to spin up many instance of the game to train on?
+ALSO THE GOAT: https://www.deepmind.com/learning-resources/introduction-to-reinforcement-learning-with-david-silver 
 
 --Other--
 I can see a possible latency issue with the algorithm, that being a lag between the pixels being displayed in the browser,
