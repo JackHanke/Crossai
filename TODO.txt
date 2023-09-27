@@ -7,6 +7,9 @@ https://medium.com/@songyilong18_21143/deep-learning-crossy-road-cccc2b646d2d
 http://web.stanford.edu/class/archive/cs/cs221/cs221.1192/2018/restricted/posters/nwrubin/poster.pdf
 
 
+Notes
+class="sc-1thi3bz-0 iQlMNh" is the annoying bar at the bottom of the game window
+
 TODO
 
 --Data Collection--
@@ -33,3 +36,5 @@ ALSO THE GOAT: https://www.deepmind.com/learning-resources/introduction-to-reinf
 I can see a possible latency issue with the algorithm, that being a lag between the pixels being displayed in the browser,
 the algorithm calculating a move, and then sending the move back to the browser.
 How do we resolve this?
+
+Test speed of screenshot method
